@@ -15,13 +15,13 @@ class App extends React.Component {
 
     render() {
         console.log(this.props.bandwidth);
-        return <div>Hello World</div>
+        return <div>Hello World, {this.props.bandwidth}</div>
     }
 }
 
 function mapStateToProps(state) {
     return {
-        bandwidth: state.monitorRes.map[ResourceName.BANDWIDTH]
+        bandwidth: state.get("monitorRes").get(ResourceName.BANDWIDTH)
     }
 }
 
